@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- This page is adapted from w3schools "How to make a link tree website https://www.w3schools.com/howto/howto_website_create_linktree.asp" -->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Add your name below -->
+  <title>Archit Gupta</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="main-text-color">
+  <!-- Content container. Everything except footer goes here -->
+  <div class="container">
+    <!-- Image and name container. Put your replacement photo—which you should crop to be square—in the images folder, then change the source attribute to images/yourportraitfilename.jpg. This path says, "Look in the images folder for yourportraitfilename.jpg." Be sure to change the alt text, too. -->
+    <div class="image-container">
+      <img src="images/hawaii.jpeg" alt="Photo by Art Hauntington" height="300" width = "145">
+    </div>
+    <div class="intro">
+      I'm Archit Gupta, a Software Engineer and Musician
+    </div>
+    <div class="section-header">
+      <h1>My work</h1>
+    </div>
+    <!-- Replace the # inside of the href="#" with your links. -->
+    <div class="links-container">
+      <div class="button toggle">Blog post</div>
+      <div class="slidedown">
+        <div class="description">
+          <h2>How TikTok is Transforming A&R in the Music Industry</h2>
+          <p>Delve into how the rise of TikTok has changed the way new artists are found!</p>
+          <a href="https://medium.com/@architgupta0602/how-tiktok-is-transforming-a-r-in-the-music-industry-4e672c3844b0" class="external-link" target="_blank">Read</a>
+        </div>
+      </div>
+
+      <div class="button toggle">Video</div>
+      <div class="slidedown">
+        <div class="description">
+          <h2>Guitar Shorts</h2>
+          <p>Country and Bluegrass styles</p>
+          <video controls>
+            <source src="images/bloodline.MOV">
+          </video>
+          <br>
+          <video controls>
+            <source src="images/doc.MP4">
+          </video>
+          <br>
+        </div>
+      </div>
+
+      <div class="button toggle">Podcast</div>
+      <div class="slidedown">
+        <div class="description">
+          <h2>How has AI impacted modern day education</h2>
+          <p>An engaging discussion among college students and their views on education in the AI era</p>
+          <a href="#" class="external-link" target="_blank">Listen</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Replace # with PDF from Google Docs, or replace the entire section with whatever you want. Or delete it! Or add another section below it!-->
+    <div class="section-header">
+      <h1>About me</h1>
+    </div>
+
+    <div class="links-container">
+      <a href="https://drive.google.com" class="button" target="_blank">Resume</a>
+    </div>
+
+  </div>
+  <div class="footer">
+    <p>© Archit Gupta, 2024. Based on a design by <a
+        href="https://www.w3schools.com/howto/howto_website_create_linktree.asp" target="_blank">w3schools</a>.
+    </p>
+  </div>
+  <script type="text/javascript" src="js/slider.js"></script>
+</body>
+
+</html>
