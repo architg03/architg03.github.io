@@ -77,6 +77,24 @@ img {
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
 }
 
+.slidedown {
+    margin: 0 auto;
+    padding: 0;
+    -webkit-transition: height .4s ease;
+    -o-transition: height .4s ease;
+    transition: height .4s ease;
+    overflow: hidden;
+    height: 0;
+    /* Initial height is 0 for hidden content */
+}
+
+.slidedown.open {
+    height: auto;
+    /* Expands when the `open` class is added */
+    padding: 1em;
+    /* Optional: add some padding for better spacing */
+}
+
 .button {
     margin: 0.5em auto;
     padding: 0.75em 1.5em;
