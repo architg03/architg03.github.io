@@ -1,10 +1,10 @@
 :root {
-    --primaryText: #fff;
-    --secondaryText: #ff015e;
-    --primary: rgba(156, 39, 176, .60);
-    --secondary: rgba(255, 1, 94, .60);
-    --buttonHover: rgba(156, 39, 176, .40);
-    --smallButtonHover: rgba(0, 0, 0, .25);
+    --primaryText: #e0e0e0; /* Slightly darker white text */
+    --secondaryText: #a9a9a9; /* Darker grey text for secondary elements */
+    --primary: rgba(200, 200, 200, 0.60); /* Darker color for primary buttons */
+    --secondary: rgba(150, 150, 150, 0.60); /* Darker grey for secondary buttons */
+    --buttonHover: rgba(200, 200, 200, 0.40); /* Darker hover effect */
+    --smallButtonHover: rgba(200, 200, 200, 0.25); /* Darker hover effect for small buttons */
 }
 
 html {
@@ -26,7 +26,7 @@ body {
     min-height: 100%;
     /* The image used for the site background. Try changing skyscape.jpg to stars.jpg. Put a replacement photo in the images folder and, in line 21 below, replace skyscape.jpg with yourbackgroundfilename.jpg */
     /* The linear gradient darkens the image, like putting a sunglasses lens on top of it. If you want to darken the image even more, change 0.1 (both times) to 0.3 or higher */
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../images/skyscape.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/web-back.jpg); /* Use a dark background image */
     /* Prevents the browser from repeating or "tiling" the background image */
     background-repeat: no-repeat;
     background-position: center;
@@ -41,6 +41,7 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    color: var(--primaryText); /* Ensure body text is white */
 }
 
 h1 {
@@ -177,7 +178,7 @@ img {
 }
 
 .external-link:hover {
-    background-color: var(--smallButtonHover)
+    background-color: var(--smallButtonHover);
 }
 
 .description {
@@ -194,8 +195,8 @@ img {
 
 .footer {
     font-size: .66em;
-    background-color: rgba(0, 0, 0, .5);
-    color: rgba(225, 225, 225, .8);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
     width: 100%;
     min-height: 3em;
