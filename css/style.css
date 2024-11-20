@@ -1,15 +1,20 @@
 :root {
-    --primaryText: #fff;
-    --secondaryText: #ff015e;
-    --primary: rgba(156, 39, 176, .60);
-    --secondary: rgba(255, 1, 94, .60); 
-    --buttonHover: rgba(156, 39, 176, .40);
-    --smallButtonHover: rgba(0, 0, 0, .25);
+    --primaryText: #e0e0e0;
+    /* Light gray for text */
+    --secondaryText: #ff8a80;
+    /* Soft coral for accent text */
+    --primary: rgba(38, 198, 218, .85);
+    /* Light teal for primary elements */
+    --secondary: rgba(255, 202, 40, .85);
+    /* Warm yellow for secondary elements */
+    --buttonHover: rgba(38, 198, 218, .6);
+    /* Softer teal for hover state */
+    --smallButtonHover: rgba(255, 255, 255, .25);
+    /* Light white for small button hover */
 }
 
 html {
     box-sizing: border-box;
-    /* keeps button boxes within phone screen width */
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     height: 100%;
@@ -24,209 +29,123 @@ html {
 body {
     margin: 0;
     min-height: 100%;
-    /* The image used for the site background. Try changing skyscape.jpg to stars.jpg. Put a replacement photo in the images folder and, in line 21 below, replace skyscape.jpg with yourbackgroundfilename.jpg */
-    /* The linear gradient darkens the image, like putting a sunglasses lens on top of it. If you want to darken the image even more, change 0.1 (both times) to 0.3 or higher */
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../images/skyscape.jpg);
-    /* Prevents the browser from repeating or "tiling" the background image */
+    background: linear-gradient(135deg, #212121 0%, #424242 100%);
+    /* Dark gradient background */
     background-repeat: no-repeat;
     background-position: center;
-    /* Freezes the image so that even the content scrolls down, the background stays put */
     background-attachment: fixed;
-    /* Resizes the background image to cover the entire container */
     background-size: cover;
-    font-family: Futura, Verdana, sans-serif;
-    line-height: 1.5;
+    font-family: 'Poppins', Verdana, sans-serif;
+    /* Modern sans-serif font */
+    line-height: 1.6;
     font-size: 18px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    color: var(--primaryText);
 }
 
-h1 {
-    font-size: 1em;
-}
-
+h1,
 h2 {
-    font-size: 1em;
-    margin-bottom: 0;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--secondaryText);
 }
 
 img {
-    margin: .5em 1em;
-    /* border: 1px solid #ccc; */
+    margin: 1em auto;
     border-radius: 50%;
     height: 150px;
-    max-width: 100%;
+    width: 150px;
     object-fit: cover;
-    /* Resizes the image to cover the entire container */
+    border: 4px solid var(--secondary);
 }
 
 .container {
     text-align: center;
-    width: 100%;    
-    padding: 0;
-    margin-right: auto;
-    margin-left: auto;
-    flex: 1;
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 1em;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-.image-container {
-    text-align: center;
-    width: 100%;
-}
-
-.main-text-color {
+.button {
+    margin: 0.5em auto;
+    padding: 0.75em 1.5em;
+    text-decoration: none;
     color: var(--primaryText);
-}
-
-.name {
-    color: var(--secondaryText);
-}
-
-.name strong {
-    background-color: rgba(0, 0, 0, 0.50);
-}
-
-.section-header {
-    padding-top: .5em;
-}
-
-.button,
-.intro,
-.links-container,
-.slidedown,
-.external-link {
-    width: 100%;
-    min-width: 50%;
-    padding: .5em 1em;
-    text-decoration: none;
-    color: inherit;
+    font-weight: bold;
     text-align: center;
-}
-
-.button, .external-link {
-    border: 1px solid var(--primaryText);
-    border-radius: 20px;
-    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
     background-color: var(--primary);
+    border-radius: 25px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s all ease;
+    border: none;
     cursor: pointer;
-    transition: 0.2s all;
 }
 
-.button:not(.highlight) {
-    background-color: var(--primary);
-}
-
-@media (hover: hover) {
-    .button:hover { background-color: var(--buttonHover); }
-}
-
-.button.highlight {
-    background-color: var(--secondary);
-}
-
-.button:active, .external-link:active { 
-    transform: scale(0.98); 
-    /* Scaling button to 0.98 to its original size */ 
-    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
-    /* Lowering the shadow */ 
-} 
-
-.intro {
-    margin: 0 auto;
-}
-
-.section {
-    margin-top: 1em;
-}
-
-.slidedown {
-    margin: 0 auto;
-    padding: 0;
-    -webkit-transition: height .4s ease;
-    -o-transition: height .4s ease;
-    transition: height .4s ease;
-    overflow: hidden;
-    height: 0;
+.button:hover {
+    background-color: var(--buttonHover);
+    transform: translateY(-3px);
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.4);
 }
 
 .external-link {
-    border: 1px solid var(--primaryText);
-    border-radius: 20px;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    margin: .5em auto 1.5em auto;
+    color: var(--secondaryText);
     text-decoration: none;
-    color: inherit;
-    height: 2em;
-    width: 6em;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    border: 2px solid var(--secondaryText);
+    border-radius: 20px;
+    transition: 0.3s ease-in-out;
+    display: inline-block;
 }
 
 .external-link:hover {
-    background-color: var(--smallButtonHover)
-}
-
-.description {
-    display: flex;
-    text-align: middle;
-    flex-direction: column;
-    padding: 0 .6em;
-}
-
-.description > p {
-    margin: .5em 0;
-    font-size: small;
+    background: var(--secondaryText);
+    color: #212121;
+    transform: scale(1.05);
 }
 
 .footer {
-  font-size: .66em;
-  background-color: rgba(0, 0, 0, .5);
-  color: rgba(225, 225, 225, .8);
-  text-decoration: none;
-  width: 100%;
-  min-height: 3em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+    font-size: 0.8em;
+    background-color: rgba(0, 0, 0, .7);
+    color: rgba(255, 255, 255, .8);
+    text-decoration: none;
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.footer a {
-    color: inherit;
-}
-
-/* Media queries allow you to change style properties according to the screen width. In this case, if the screen is AT LEAST 540 pixels wide (bigger than a standard phone), the .container resizes to 540 pixels and the buttons and intro resize to 85% of the container width */
+/* Media Queries for Responsiveness */
 @media (min-width: 540px) {
     .container {
         max-width: 540px;
     }
-    
-    .button,
-    .intro,
-    .slidedown {
-        width: 85%;
+
+    .button {
+        width: 70%;
     }
 }
 
-/* If the screen is AT LEAST 768 pixels wide (standard tablet or larger), the .container resizes to 750 pixels and the buttons and intro resize to 40% of the container width */
 @media (min-width: 768px) {
     .container {
         max-width: 768px;
     }
-    
-    .button,
-    .intro,
-    .slidedown {
-        width: 40%;
+
+    .button {
+        width: 50%;
     }
 }
